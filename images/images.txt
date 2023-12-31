@@ -1,0 +1,1 @@
+captured frames are saved as images in this folder.
