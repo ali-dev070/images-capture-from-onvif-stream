@@ -1,15 +1,8 @@
-#save video
-#ffmpeg -rtsp_transport udp -i "rtsp://784352:888888@192.168.20.16:554/onvif1" -c copy output.mkv
-
-#save one frame
-#ffmpeg -rtsp_transport udp -i "rtsp://784352:888888@192.168.20.16:554/onvif1" -ss 00:00:05 -vframes 1 frame_out.jpg
-
-
 import subprocess
 import time
 
 # Replace with your RTSP stream URL
-rtsp_url = "rtsp://784352:888888@192.168.20.16:554/onvif1"
+rtsp_url = "rtsp://path-to-onvif-stream"
 
 # Set image capture interval (in seconds)
 capture_interval = 30
