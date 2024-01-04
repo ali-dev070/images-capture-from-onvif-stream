@@ -7,17 +7,15 @@ rtsp_url = "rtsp://path-to-onvif-stream"
 
 # Set image capture interval (in seconds)
 capture_interval = 30
-
-# Path to save the captured images
-image_path = "images/" + time.strftime('%Y-%m-%d')
-
-
-if not os.path.exists(image_path):
-    os.mkdir(image_path)
     
 
 while True:
     try:
+        # Path to save the captured images
+        image_path = "images/" + time.strftime('%Y-%m-%d')
+        if not os.path.exists(image_path):
+            os.mkdir(image_path)
+
         image_name = "image_" + time.strftime('%H.%M.%S')
         
         # FFmpeg command to capture a single image
