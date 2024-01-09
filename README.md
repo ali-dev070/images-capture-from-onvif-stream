@@ -28,4 +28,4 @@ nohup python3 ipcamera.py > /dev/null 2>&1 & disown
 crontab -e
 
 **Then add following cron job to the tab:**
-* 1 * * * python3 zipAndUploadToDropbox.py >> cronjob_logs.log 2>&1
+* * 1 * * * python3 zipAndUploadToDropbox.py >> cronjob_logs.log 2>&1
