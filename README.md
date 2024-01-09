@@ -23,3 +23,9 @@ pip install ffmpeg-python
 
 ### To run script in background forever in linux:
 nohup python3 ipcamera.py > /dev/null 2>&1 & disown
+
+### To run the cron job everyday at 1am
+crontab -e
+
+**Then add following cron job to the tab:**
+* 1 * * * python3 zipAndUploadToDropbox.py >> cronjob_logs.log 2>&1
